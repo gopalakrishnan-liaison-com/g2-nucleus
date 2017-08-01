@@ -1,0 +1,15 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# REST for retrieving the payload details
+GET     /                           controllers.ReadPayloadController.listPayload
+
+# REST for adding the payload details
+POST    /                           controllers.AddPayloadController.addPayload
+
+# REST for clear the payload details
+DELETE  /                           controllers.RemovePayloadController.removePayload
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
